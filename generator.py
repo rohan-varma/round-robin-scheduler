@@ -14,7 +14,6 @@ def my_xrange(i, job_id):
 class Job(object):
 	def __init__(self, job_func, kwargs, job_priority, job_id = None):
 		self.job = job_func(**kwargs)
-		self.kwargs = kwargs
 		self.priority = job_priority
 		self.id = job_id if job_id else random.randint(1, 1000)
 		self.num_times_run = 0
